@@ -63,18 +63,24 @@ Compared to Exercise 1, the project is now a bit larger.
 
 This exercise consists of three larger tasks:
 
-1. In the first task you will change the way in which the movies are stored on the server. You move the movie data to the movie model module `server/movie-model.js`. Then you re-implement `GET /movies` to return the movies from that module. Finally, you update the overview rendering to include an *Edit* button for each movie.
-2. In the second task you will build your first `form`. The user will be able to edit the data of one specific movie. For this to work you will add a new endpoint `GET /movies/:imdbID`, implement navigation from the overview to a new `edit.html` page, and create the form in `edit.html`.
-3. In the third task you will implement saving: the user modifies the form and clicks *Save*, which triggers a `PUT /movies/:imdbID` request to update (or create) the movie on the server.
+1. **Part 1: Move the movie data to the movie model (2 point)**
+
+   In the first task you will change the way in which the movies are stored on the server. You move the movie data to the movie model module `server/movie-model.js`. Then you re-implement `GET /movies` to return the movies from that module. Finally, you update the overview rendering to include an *Edit* button for each movie.
+2. **Part 2: Add a form to edit a movie (2 points)**
+
+   In the second task you will build your first `form`. The user will be able to edit the data of one specific movie. For this to work you will add a new endpoint `GET /movies/:imdbID`, implement navigation from the overview to a new `edit.html` page, and create the form in `edit.html`.
+3. **Part 3: Store the modified movie data on the server (2 points)**
+
+   In the third task you will implement saving: the user modifies the form and clicks *Save*, which triggers a `PUT /movies/:imdbID` request to update (or create) the movie on the server.
 
 ### Important: Presentation Requirement
 
-**After completing this exercise, half of the group will be randomly selected to present and demonstrate their implementation during our next meeting.** Be prepared to:
+**You will be asked about your implementation during our next meeting.** Be prepared to:
 - Walk through your code and explain your implementation choices
-- Demonstrate the working application (edit + save)
+- Demonstrate the working application
 - Answer questions about your approach
 
-Make sure you understand what your code does and why you made certain decisions.
+Make sure you understand what your code does and why you made certain decisions!
 
 ## Checking your implementation
 
@@ -138,18 +144,14 @@ Tip: you can use [`Object.values(...)`](https://developer.mozilla.org/en-US/docs
 
 Move (or recreate) your rendering code from Exercise 1 into `server/files/index.js`.
 
-Then extend your rendering so that each movie includes an **Edit** button:
-- text content: `Edit`
-- `type="button"`
-- wrapped in a `p` element
-- appended right after the `h1` element inside the movie’s `article`
+Then extend your rendering so that each movie includes an **Edit** button.
 
-Also, make sure that the `article` element representing a movie has its IMDB id set as its `id` attribute.
+Also, make sure that the element representing a movie has its IMDB id set as its `id` attribute.
 
 **Verify your implementation:** reload [http://localhost:3000/](http://localhost:3000/) and check that:
 - all movies appear
 - each movie has an *Edit* button
-- the movie `<article>` elements have the correct `id` attributes (you can check this in DevTools)
+- the movie elements have the correct `id` attributes (you can check this in DevTools)
 
 ---
 
